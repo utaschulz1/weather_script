@@ -80,7 +80,7 @@ Apart from Python itself, you will need Git and a command line interface (CLI). 
 If you're new to using a CLI and Git, consider familiarizing yourself with a text editor such as VS Code or Sublime Text first. 
 This will help you in three ways:
 - You can read and write code in your repository files.
-- You have one more command lines integrated in the editor to set up your environment, that is, to install program packages and to run your code.
+- You have one or more command lines integrated in the editor. You just need one. You use it to set up your environment, that is, to install program packages and to run your code.
 - You can use extensions (plugins) to make interacting with GitHub more streamlined.
    
 Here are some resources to help you get started:
@@ -101,6 +101,7 @@ After installation, verify Python is installed by opening a terminal and running
 python --version
 pip --version
 ```
+You should see the versions in your command line.
 
 ### About virtual environment
 
@@ -113,8 +114,8 @@ This is what you need to know to begin with:
 - A virtual environment creates an isolated Python environment for your project. This ensures that:
   - Dependencies for one project don't interfere with others.
   - You don't accidentally modify the global Python environment.
-- The virtual environment functionality ``venv`` comes preinstalled with the Python installation. Type the ``venv`` commands into the CLI as instructed.
-- The package installation functionality ```pip``` also comes preinstalled with the Python environment. Type the ``pip`` command into the CLI as instructed.
+- The virtual environment functionality ``venv`` comes preinstalled with the Python installation. You can type the ``venv`` commands into the CLI as instructed when you are ready for the [Getting started](#getting-started).
+- The package installation functionality ```pip``` also comes preinstalled with the Python environment. You can type the ``pip`` command into the CLI as instructed above when you are ready for the [Getting started](#getting-started).
 - When you are finished working in your project environment, you need to deactivate your virtual environment with ``deactivate``.
   - The virtual environment is only active in the terminal session where it was activated. If you close the terminal, the virtual environment is automatically deactivated.
 
@@ -125,3 +126,5 @@ You need two API keys to write into the .env file. You get them on the respectiv
 - OpenCage: https://opencagedata.com/api#quickstart (no account required)
 - OpenAI: https://platform.openai.com/api-keys (account required)
 - Open-Meteo does not require an API key.
+
+Now you are ready to open the .env file in your text editor and add the keys as instructed in step 5. 
