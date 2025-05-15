@@ -1,7 +1,7 @@
 # Weather and outfit suggestion script in Python with API requests
 
 
-This program fetches weather data for a given city (input promt) and suggests an appropriate outfit based on the weather conditions.
+This program fetches weather data for a given city (input prompt) and suggests an appropriate outfit based on the weather conditions.
 
 - [What the script does](#what-the-script-does)
 - [Prerequisites](#prerequisites)
@@ -14,7 +14,7 @@ This program fetches weather data for a given city (input promt) and suggests an
 
 ## What the script does
 
-The script queries OpenCage geocoder to get the latitude and longitude of the input city and feeds it into the Open-Meteo request for current weather data.
+The script queries the OpenCage geocoder to get the latitude and longitude of the input city and feeds it into the Open-Meteo request for current weather data.
 
 The output is turned into a prompt to request outfit suggestions from OpenAI.
 
@@ -24,7 +24,7 @@ The output will be written into the .md file weather_response.md.
 - Python (I used Python 3.9.7).
 - A terminal or command-line interface (e.g., Command Prompt, Git Bash, or Terminal).
 - Git (to clone the repository).
-- If you are a total beginner see [Notes for beginners](##notes-for-beginners) below.
+- If you are a total beginner, see [Notes for beginners](##notes-for-beginners) below.
 
 ## Getting started
 
@@ -51,7 +51,7 @@ The output will be written into the .md file weather_response.md.
     pip install -r requirements.txt
     ```
 
-5. Open .env file and add your API keys:
+5. Open the .env file and add your API keys:
 
     ```
     OPENAI_API_KEY=your_openai_api_key_here
@@ -73,15 +73,15 @@ Apart from Python itself, you will need Git and a command line interface (CLI). 
 - You need to interact with Python and your repository folder using a command line interface, like bash or terminal. The CLI is the place where you type in all the commands above.
   
 
-> ⚠️ **Warning:** There is no undo button in the command line interface, no CTRL+Z. It interacts directly with your computer. You need to understand, what you are doing.
+> ⚠️ **Warning:** There is no undo button in the command line interface, no CTRL+Z. It interacts directly with your computer. You have to understand what you are doing.
 
 **Text editor**
 
 If you're new to using a CLI and Git, consider familiarizing yourself with a text editor such as VS Code or Sublime Text first. 
 This will help you in three ways:
 - You can read and write code in your repository files.
-- You have one more command lines integrated in the editor to set up your environment, that is, install program packages, and to run your code.
-- You can use extensions (plugins) to make interacting with GitHub mor streamlined.
+- You have one more command lines integrated in the editor to set up your environment, that is, to install program packages and to run your code.
+- You can use extensions (plugins) to make interacting with GitHub more streamlined.
    
 Here are some resources to help you get started:
 - [Getting started with Visual Studio Code](https://code.visualstudio.com/docs/introvideos/basics)
@@ -93,7 +93,7 @@ Here are some resources to help you get started:
 If you don't have Python installed yet, go to [Python.org](https://www.python.org/) and download and install it for your operating system. 
 
 During installation:
-- Check the box that says "Add Python to PATH". This ensures that the Python executable and its tools (like ``pip``) are accessible from the command line (CLI) without needing to specify their full file paths.
+- Check the box that says: "Add Python to PATH". This ensures that the Python executable and its tools (like ``pip``) are accessible from the command line (CLI) without needing to specify their full file paths.
 - Select the option to install Python for all users (if applicable).
   
 After installation, verify Python is installed by opening a terminal and running:
@@ -106,7 +106,7 @@ pip --version
 
 > **Note:** Don't install the packages from the requirements.txt file just yet.
 
-It is good practise to install additional Python packages in the project folder (created in step 1) using a virtual environment (see step 2). 
+It is good practice to install additional Python packages in the project folder (created in step 1) using a virtual environment (see step 2). 
 
 This is what you need to know to begin with:
 
@@ -120,7 +120,7 @@ This is what you need to know to begin with:
 
 ### Get API keys
 
-You need two API key to write into the .env file. You get them on the respective website:
+You need two API keys to write into the .env file. You get them on the respective website:
 
 - OpenCage: https://opencagedata.com/api#quickstart (no account required)
 - OpenAI: https://platform.openai.com/api-keys (account required)
