@@ -1,20 +1,21 @@
 # Weather and outfit suggestion script in Python with API requests
 
 
-This program fetches weather data for a given city (input prompt) and suggests an appropriate outfit based on the weather conditions.
+This CLI tool fetches weather data for a given city (input prompt) and suggests an appropriate outfit based on the weather conditions.
 
-- [What the script does](#what-the-script-does)
+- [What the CLI tool does](#what-the-script-does)
 - [Prerequisites](#prerequisites)
 - [Getting started](#getting-started)
 - [Notes for beginners](#notes-for-beginners)
   - [Coding setup](#coding-setup)
   - [Download and install Python](#download-and-install-python)
   - [About virtual environment](#about-virtual-environment)
-  - [Get API keys](#get-api-keys)
+  - [Get API keys and keep them safe](#get-api-keys-and-keep-them-safe)
+  - [Files in your repository](files-in-your-repository)
 
-## What the script does
+## What the CLI tool does
 
-The script queries the OpenCage geocoder to get the latitude and longitude of the input city and feeds it into the Open-Meteo request for current weather data.
+The CLI tool queries the OpenCage geocoder to get the latitude and longitude of the input city and feeds it into the Open-Meteo request for current weather data.
 
 The output is turned into a prompt to request outfit suggestions from OpenAI.
 
@@ -28,15 +29,17 @@ The output will be written into the .md file weather_response.md.
 
 ## Getting started
 
-1. Clone the repository:
-   ```bash
+1. Fork this repository account using the ```fork``` button to copy it to your GitHub account.
+2. Clone the repository from your account to your computer and open it:
+   ```
    git clone https://github.com/your-username/your-repo-name.git
-   cd your-repo-name
-2. Create a virtual environment
-   
-   ```python -m venv venv```
 
-3. Activate the virtual environment:
+   cd your-repo-name
+   ```
+3. Create a virtual environment:
+   
+      ```python -m venv venv```
+4. Activate the virtual environment:
 
     - On Windows:
   
@@ -45,33 +48,29 @@ The output will be written into the .md file weather_response.md.
     - On macOS/Linux: 
   
         ```source venv/bin/activate```
-
-4. Install the required dependencies listed in the ``requirements.txt`` file:
+5. Install the required dependencies listed in the ``requirements.txt`` file:
     ```
     pip install -r requirements.txt
     ```
-
-5. Open the .env file and add your API keys:
+6. Open the .env file and add your API keys:
 
     ```
     OPENAI_API_KEY=your_openai_api_key_here
     OPENCAGE_API_KEY=your_opencage_api_key_here
     ```
-6. Run the program
+7. Run the program
    
     ```
     python call-weather-api.py
     ```
-
 ## Notes for beginners
 
-You need to download this repository to your computer as described in step 1 in order to use it. The following are the prerequisites you need to run this script locally on your computer.
+You need to download this repository to your computer as described in step 2 in order to use it. The following are the prerequisites you need to run this script locally on your computer.
 
 ### Coding setup
 Apart from Python itself, you will need Git and a command line interface (CLI). This, for two reasons: 
 - You need to interact with GitHub using Git commands.
 - You need to interact with Python and your repository folder using a command line interface, like bash or terminal. The CLI is the place where you type in all the commands above.
-  
 
 > ⚠️ **Warning:** There is no undo button in the command line interface, no CTRL+Z. It interacts directly with your computer. You have to understand what you are doing.
 
@@ -107,7 +106,7 @@ You should see the versions in your command line.
 
 > **Note:** Don't install the packages from the requirements.txt file just yet.
 
-It is good practice to install additional Python packages in the project folder (created in step 1) using a virtual environment (see step 2). 
+It is good practice to install additional Python packages in the local project folder (created in step 2) using a virtual environment (see step 3). 
 
 This is what you need to know to begin with:
 
@@ -119,12 +118,34 @@ This is what you need to know to begin with:
 - When you are finished working in your project environment, you need to deactivate your virtual environment with ``deactivate``.
   - The virtual environment is only active in the terminal session where it was activated. If you close the terminal, the virtual environment is automatically deactivated.
 
-### Get API keys
+### Get API keys and keep them save
 
 You need two API keys to write into the .env file. You get them on the respective website:
 
-- OpenCage: https://opencagedata.com/api#quickstart (no account required)
+- OpenCage: https://opencagedata.com/api#quickstart (account required)
 - OpenAI: https://platform.openai.com/api-keys (account required)
 - Open-Meteo does not require an API key.
 
-Now you are ready to open the .env file in your text editor and add the keys as instructed in step 5. 
+Now you are ready to open the .env file in your text editor and add the keys as instructed in step 6. 
+
+> **Warning:** To protect your API keys, ensure the `.env` file is excluded from version control by adding it to a `.gitignore` file. 
+
+This repository already includes a `.gitignore` file that excludes the `.env` file. You don't need to do anything extra, but here's how it works:
+ - The `.gitignore` file tells Git to ignore certain files and folders, so they are not tracked or uploaded to GitHub.
+ - This prevents sensitive information, like your API keys, from being exposed publicly.
+ - You can view the `.gitignore` file in the root of the repository to see what is excluded.
+
+If you accidentally commit your `.env` file, remove it from Git tracking with the following command:
+```bash
+git rm --cached .env
+```
+### Files in your repository
+
+``` 
+weather_script/
+├── llm_utils.py          # Functions related to LLM requests (e.g., OpenAI API)
+├── weather_utils.py      # Functions related to weather data (e.g., Open-Meteo, OpenCage)
+├── call-weather-api.py   # Main script to orchestrate the program
+├── requirements.txt      # Dependencies
+├── .env                  # API keys
+├── weather_response.md   # Output file (generated by the script)

@@ -2,11 +2,8 @@
 
 ## Weather Details
 
-The temperature in Lisbon, Portugal is 20.2°C. 
-It is currently Clear sky,
-with a wind speed of 18.2m/s.
-
+The temperature in Potsdam, Germany is 14.4°C. It is currently Overcast, with a wind speed of 15.7 m/s.
 
 ## Suggested Outfit
 
-Wear lightweight layers, such as a t-shirt and a light jacket or windbreaker for wind protection. Opt for comfortable pants or jeans. Secure any loose accessories and consider sunglasses for the clear sky.
+Opt for a light jacket or sweater. Include a windbreaker and closed-toe shoes. Don't forget an umbrella.
