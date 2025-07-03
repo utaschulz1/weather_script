@@ -29,7 +29,7 @@ The output will be written into the .md file weather_response.md.
 
 ## Getting started
 
-1. Fork this repository account using the ```fork``` button to copy it to your GitHub account.
+1. Fork this repository using the ```fork``` button to copy it to your GitHub account.
 2. Clone the repository from your account to your computer and open it:
    ```
    git clone https://github.com/your-username/your-repo-name.git
